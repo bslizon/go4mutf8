@@ -16,18 +16,14 @@ func Decode(b []byte) (string, error) {
 	for index < len(b) {
 		switch {
 		case (b[index] & 0b10000000) == 0b00000000:
-
 			rr = append(rr, rune(b[index]))
-
 			index++
 
 		case ((b[index] & 0b11100000) == 0b11000000) &&
 			((b[index+1] & 0b11000000) == 0b10000000):
 			x := b[index]
 			y := b[index+1]
-
 			rr = append(rr, rune((int(x)&0x1f)<<6+int(y)&0x3f))
-
 			index += 2
 
 		case (b[index] == 0b11101101) &&
@@ -42,9 +38,7 @@ func Decode(b []byte) (string, error) {
 			_ = b[index+3]
 			y := b[index+4]
 			z := b[index+5]
-
 			rr = append(rr, rune(0x10000+(int(v)&0x0f)<<16+(int(w)&0x3f)<<10+(int(y)&0x0f)<<6+int(z)&0x3f))
-
 			index += 6
 
 		case ((b[index] & 0b11110000) == 0b11100000) &&
@@ -53,9 +47,7 @@ func Decode(b []byte) (string, error) {
 			x := b[index]
 			y := b[index+1]
 			z := b[index+2]
-
 			rr = append(rr, rune(int(x)&0xf<<12+(int(y)&0x3f)<<6+int(z)&0x3f))
-
 			index += 3
 
 		default:
