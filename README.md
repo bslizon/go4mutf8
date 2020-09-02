@@ -1,6 +1,6 @@
 # go4mutf8
 
-Codec for Android or JNI MUTF-8 by Go
+Codec for Android or JNI MUTF-8(Modified UTF-8) by Go
 
 Reference
 
