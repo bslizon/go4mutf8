@@ -5,7 +5,7 @@ Codec for Android or JNI MUTF-8(Modified UTF-8) by Go
 Reference
 
 - [Oracle Doc](https://docs.oracle.com/javase/1.5.0/docs/guide/jni/spec/types.html#wp16542)
-- [stack over flow](https://stackoverflow.com/questions/32205446/getting-true-utf-8-characters-in-java-jni)
+- [stackoverflow](https://stackoverflow.com/questions/32205446/getting-true-utf-8-characters-in-java-jni)
 - [/dex/src/main/java/com/android/dex/Mutf8.java](https://www.google.com/search?q=libcore%5Cdex%5Csrc%5Cmain%5Cjava%5Ccom%5Candroid%5Cdex%5CMutf8.java)
 - [简书](https://www.jianshu.com/p/f604a4224098)
 
